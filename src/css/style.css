@@ -1,18 +1,112 @@
+/*-- preloader начал --*/
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+    /* не трогай уберёшь хоть одну координату всё собьется ( не будет работать ) */
+    
+  background: url(../img/apple.jpg) center no-repeat;
+/*---------------*/
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    display: flex;
+/*чтобы надпись была по центру*/
+    
+    z-index: 1001;/* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+}
+.preloader h1{
+    font-size: 9rem;
+    color:rgba(255,255,255,0.3);/*на другой тип не менять (#ffff, и т.д. ) картинка исчезнет работает только с (rgba) */
+    background-image: url(../img/maxre__1.jpg);
+    -webkit-background-clip: text;
+    -moz-background-clip:text ;
+    background-clip: text ; 
+    -webkit-animation: load__1 5s infinite ease-in-out;
+    -o-animation: load__1 5s infinite ease-in-out;
+    animation: load__1 5s infinite ease-in-out;
+}
+@keyframes load__1{
+    from{
+        background-position: left 0 ;
+    }
+    to{
+        background-position: left 600px ;
+    }
+}
+
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+/*-- preloader закончил --*/
+
 body{
     font-family: Arial, sans-serif;
+/* стиль шрифта  */
 }
 nav{
     width/*ширина*/: 100%;
     height/*высота*/: 60px;
     background: #344051;
+    position: fixed;
+    
 }
+.menu li a{
+    transition: all 0.2s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+    
+}
+
+.menu li a:visited{
+    color: white;
+/*  смена цвета сылки (после перехода "visited")  */
+}
+.menu li a:hover{
+    color: #00ffff;
+    /*  смена цвета (при наведении  "hover")   */
+}
+.menu li a:active{
+   transform: scale(1.1);
+    /*  увеличивает размер (при нажатие  "active") */
+}
+
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
 .logo{
     color: #ffff;
     font-size: 28px;
     line-height: 60px;
     padding-left: 388px;
     float:left;
+    -webkit-animation: comming 2s ease;
+    -o-animation:  comming 2s ease;
+    animation: comming 2s ease;
 }
+
+
+
 .menu{
     float:left;
     padding-left: 432px; 
@@ -25,17 +119,61 @@ nav{
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: topshift 0.4s forwards ease;
+    -o-animation: topshift 0.4s forwards ease;
+    animation: topshift 0.4s forwards ease;
+    opacity: 0;
 }
+
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+      animation-delay: 2s;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/hh.png) 90% 100%/auto 85% no-repeat ,url(../img/bg.jpg) center/cover no-repeat;
 }
 .title__container{
     float:left; 
 margin: 432px 0px 0px 404px;
     color: #2c384a;
-    text-align: center;   
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: topshift2 1s ease forwards;
+    -o-animation:topshift2 1s ease forwards;
+    animation: topshift2 1s ease forwards;    
+    -webkit-animation-delay:2s ;
+    -o-animation-delay: 2s ;
+    animation-delay: 2s ; 
 }
 .title__container h1{
     font-size:60px;
@@ -48,6 +186,18 @@ margin: 432px 0px 0px 404px;
     color: #79818d;
 
 }
+
+@keyframes topshift2{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
+}
+
 .title__container input{
     height: 40px;
     text-align:center;
@@ -58,6 +208,19 @@ margin: 432px 0px 0px 404px;
     font-size: 13px;
     padding: 0 16px;
     margin: 58px 14px ;
+    
+}
+.title__container input{
+transition: all 0.3s; 
+    transform: scale(1)
+}
+
+.title__container input:hover{
+background: #344051; 
+    color: white;
+}
+.title__container input:active{
+    transform:scale(1.1);
 }
 .OboMne h2{
     margin-top: 108px;
@@ -89,7 +252,17 @@ margin: 432px 0px 0px 404px;
     border-radius: 6px ;
     padding: 9px 11px 10px 32px;
     background: url(../img/ikonka.png) 10px 9px/auto  no-repeat;
+    display: inline-block;
+     transform: scale(1)
 }
+.OboMne a:hover {
+    background: #f67f3a;
+color: white;
+} 
+.OboMne a:active{
+    transform: scale(1.1)
+}
+
 .What_i_can_do{
     margin-top: 97px;
     height: 522px;
@@ -166,8 +339,8 @@ float: left;
     color: #1c2534;
 
 }
-.website input{
-    width: 615px;
+.website select{
+    width: 730px;
     height:45px;
     padding-left: 25px;
     border: 0px solid #6d7682;
@@ -179,8 +352,8 @@ float: left;
     font-size: 20px;
     color: #1c2534;
 }
-.design input{
-    width: 615px;
+.design select{
+    width: 730px;
     height:45px;
     padding-left: 25px;
     border: 0px solid #6d7682;
@@ -191,8 +364,8 @@ float: left;
     font-size: 20px;
     color: #1c2534;
 }
-.adaptability input{
-    width: 615px;
+.adaptability select{
+    width: 730px;
     height:45px;
     padding-left: 25px;
     border: 0px solid #6d7682;
@@ -216,6 +389,8 @@ float: left;
     margin-top: 153px;
     height: 497px;
     background: url(../img/fn.jpg) center  no-repeat;
+    background-attachment:fixed;
+    overflow: hidden;
     
 }
 .zag_statistics h2{
@@ -365,7 +540,16 @@ float: left;
     border: 3px solid #ffff;
     background: none;
     border-radius: 6px;
+ transform: scale(1)
   
+  
+}
+.data_entry3_input1 input:hover{
+    transform: scale(1.1)
+}
+}
+.data_entry3_input1 input:active{
+    transform: scale(1)
 }
 .data_entry3_input2 input{
      margin-top: 28px ;
@@ -378,6 +562,13 @@ float: left;
     border: 3px solid #ffff;
     background: none;
     border-radius: 6px;
+    transform: scale(1)
+}
+.data_entry3_input2 input:hover{
+    transform: scale(1.1)
+}
+.data_entry3_input2 input:active{
+    transform: scale(1)
 }
 .silka_1 a{
     float: left;

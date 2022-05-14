@@ -8,16 +8,20 @@
     <meta name="robots" content="all">
     <meta property="og:title" content="Это моя первая страница...">
     
-    <title>Document</title>
+    <title>мой первый сайт</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    
+     
 </head>
 
 <body>
 <div class="preloader">
-   <h1>ЗАГРУЗКА</h1>
+   <h2>ЗАГРУЗКА</h2>
 </div>
   
 
@@ -27,81 +31,294 @@
     window.setTimeout(function () {
       document.body.classList.add('loaded');
       document.body.classList.remove('loaded_hiding');
-    }, 5000);
+    }, 500);
   }
 </script>
   
    <header>
        <nav>
-           <div class="logo">Андрей Браун</div>
-           <div class="menu"><ul>
-               <li> <a href="#">Обо мне</a> </li>
+          <div class="container">
+              <div class="row">
+                  <div class="col-xxl-2 col-lg-3 col-7"><div class="logo">Андрей Браун</div></div>
+                  <div class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block"><div class="menu"><ul>
+               <li> <a href="#">Обомне</a> </li>
                <li> <a href="#">Услуги</a> </li>
                <li> <a href="#">Кейсы</a> </li>
                <li> <a href="#">Прайс</a> </li>
                <li> <a href="#">Отзывый</a> </li>
                <li> <a href="#">Контакты</a> </li>
-           </ul></div>
+           </ul> 
+               </div></div>
+                <div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
+                    <div class="dropdown">
+  <button class="btn btn-outline-info  dropdown-toggle white-btn"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+   навигация
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li> <a class="dropdown-item" href="#">Обомне</a> </li>
+               <li> <a class="dropdown-item"  href="#">Услуги</a> </li>
+               <li> <a class="dropdown-item" href="#">Кейсы</a> </li>
+               <li> <a class="dropdown-item" href="#">Прайс</a> </li>
+               <li> <a class="dropdown-item" href="#">Отзывый</a> </li>
+               <li> <a class="dropdown-item" href="#">Контакты</a> </li>
+  </ul>
+</div>
+                </div>
+              </div>
+          </div>
        </nav>
    </header>
    
    <main>
    
-   <section class="main"><div class="title__container">
-      <h1>Привет <br> Я Андрей Браун</h1>
-   <h4>Фулл стек веб-разработчик и Android разработчик</h4> 
+   <section class="main">
+    <div class="container h-100">
+    <div class="row align-items-center h-100 ">
+        <div class="col-lg-6 mt-5 pt-5">
+            <div class="title__container mt-5">
+      <h1> Привет <br> Я Андрей Браун </h1>
+   <h4><i class="fa  fa-css3" aria-hidden="true"></i>
+Фулл стек веб-разработчик и Android разработчик</h4> 
        <input type="button" value="Обо мне">
        <input type="button" value="Мои работы">
    </div>
+</div></div></div>
+    
+     
    </section>
    </main>
    
   <div class="OboMne">
-      <h2>ОБО МНЕ</h2>
+     <div class="container ">
+         <div class="row justify-content-center">
+         <div class="col-fluid-2  mt-5 OboMne_01" >
+      <h2 >ОБО МНЕ</h2>
       
        <div class="cherta"><p>
       <img src="img/cherta.png" alt="Ой кажется картинка пропала :(">
       </p>
       </div>
+      </div></div>
+      <div class="row justify-content-center">
+      <div class="col-sm-3 p-3 ">
+  <img src="img/f1.PNG" class="rounded mx-auto d-block  img_f1" alt="Ой кажется картинка пропала :(">
+</div>
+      </div>
+      <div class="row justify-content-center">
+      <div class=" col-8 w-60 obomne_text_1">
+      
       <div class="tt"> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto hic dolorem vel sed nisi voluptatum, velit eos. Laudantium, tempore, excepturi <br>!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto hic dolorem vel sed nisi voluptatum, velit eos.</p>
        </div>
        <div class="tt1">
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto hic dolorem vel sed nisi voluptatum, velit eos. Laudantium, tempore, excepturi <br>!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto hic dolorem vel sed nisi voluptatum, velit eos.</p> 
-       </div>
        
-     <a href="rez/LVV.txt" download="" target="_blank" >Скачать резюме </a> <!--СКАЧАЕТСЯ БЕЗВРЕДНЫЙ ТЕКСТОВЫ ФАЙЛ СКАЧЕВАЕТСЯ (НЕ ВО ВСЕХ БРАУЗЕРАХ)-->
+       </div></div></div>
+       <div class="row justify-content-center">
+       <div class="col-2 mt-3"> 
+       
+       
+     <a href="rez/LVV.txt" download="" >
+     <button type="button" class="btn btn-outline-secondary">
+<i class="fa fa-cloud-download" aria-hidden="true"></i> Скачать резюме
+</button></a>
     
-  </div>
+    
+     
+       <!--СКАЧАЕТСЯ БЕЗВРЕДНЫЙ ТЕКСТОВЫ ФАЙЛ СКАЧЕВАЕТСЯ Скачать резюме  -->
+     </div>
+      </div></div></div>
+    
     
    <div class="What_i_can_do">
+     
+     <div class="container-fluid mt-5" >
+     <div class="bg-imag" style="background-image: url(../src/img/bg1.jpg); width: 100%;">
+ 
+
+      <div class="contiainer ">
+      <div class="col-fluid-2 OboMne_01" >
+       <div class="col-fluid-2 What_i_can_do_01  ">
        <h2>ЧТО Я УМЕЮ</h2>
+       <div class="cherta"><p>
+      <img src="img/cherta.png" alt="Ой кажется картинка пропала :(">
+      </p>
+      </div>
+      </div>
+       </div>
+       
        <div class="Skills">
        
-         <ul>
-           <li>Вэб-дизайн  </li>
-            <li>Разработка </li>
-             <li>СЕО-Оптимизация </li>
-              <li>Маркетинг </li>
-              
-       </ul>
-       <p>amet, consectetur adipisicing  Quos ipsum non expedita? Lorem ipsum dolor sit</p>
-           <p> Lorem ipsum dolor sit amet, consectetur adipisicing Quos ipsum  non expedita?</p>
-           <p>Lorem ipsum dolor sit amet,  consectetur adipisicing Quos ipsum non expedita?</p> 
-          <p> Lorem ipsum dolor sit Quos ipsum non expedita? amet, consectetur adipisicing</p>
+       <div class="  d-flex  justify-content-evenly  p-5  d-none d-sm-flex">
+       
+<!--       <div class=" d-nome d-sm-block   Skills_00  "></div>-->
+       
+        <div class="col-2 Skills_01   ">
+        
+        <img src="img/n.png" class="p-3" alt="Ой кажется картинка пропала :(">
+        <p class="vb-diz">
+        Вэб-дизайн 
+        </p>
+       <p class="vb-diz-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum, voluptates suscipit quae sed nisi.</p>
+        </div>
+         
+         <div class="col-2 Skills_01  m-6">
+        <img src="img/z.png" class="p-3" alt="Ой кажется картинка пропала :(">
+        <p class="vb-diz">
+        Разработка 
+        </p>
+       <p class="vb-diz-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum, voluptates sed nisi.</p>
+        </div>
+          
+          <div class="col-2 Skills_01  m-6">
+        <img src="img/raketa.png" class="p-3" alt="Ой кажется картинка пропала :(">
+        <p class="vb-diz">
+        СЕО-Оптимизация 
+        </p>
+       <p class="vb-diz-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum, voluptates suscipit quae sed nisi.</p>
+        </div>
+          
+          <div class="col-2 Skills_01  m-6">
+        <img src="img/gramofon.png"  class="p-3" alt="Ой кажется картинка пропала :(">
+        <p class="vb-diz">
+        Маркетинг 
+        </p>
+       <p class="vb-diz-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum, voluptates sed nisi.</p>
+        </div>
        </div>
-       <div class="pp">
-           
-       </div>
+  
+         
+         
+          <div class=" d-flex d-sm-none  flex-column justify-content-center   mb-3   ">
+          
+  <div class="p-2 bd-highlight">
+        <img src="img/n.png" class="p-3" alt="Ой кажется картинка пропала :(">
+        <p class="vb-diz">
+        Вэб-дизайн 
+        </p>
+       <p class="vb-diz-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum, voluptates suscipit quae sed nisi.</p></div>
+ 
+       
+         <div class="p-2 bd-highlight">
+        <img src="img/z.png" class="p-3" alt="Ой кажется картинка пропала :(">
+        <p class="vb-diz">
+        Разработка 
+        </p>
+       <p class="vb-diz-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum, voluptates sed nisi.</p>
+        </div>
+  
+       
+       <div class="p-2 bd-highlight"> <img src="img/raketa.png" class="p-3" alt="Ой кажется картинка пропала :(">
+        <p class="vb-diz">
+        СЕО-Оптимизация 
+        </p>
+       <p class="vb-diz-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum, voluptates suscipit quae sed nisi.</p>
+        </div>
+  
+  
+  <div class="p-2 bd-highlight"><img src="img/gramofon.png"  class="p-3" alt="Ой кажется картинка пропала :(">
+        <p class="vb-diz">
+        Маркетинг 
+        </p>
+       <p class="vb-diz-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum, voluptates sed nisi.</p>
+        </div>
+</div>
+        
+      
+      </div>
+ </div>
+   </div>
+   </div>
    </div>
    
+   
    <div class="Cases">
+   <div class="container ">
+         <div class="row d-flex justify-content-center ">
+         <div class="Cases_01">
+         <div class="col-fluid-2  mt-5 " >
+         <div class="Cases_02">
        <h2>КЕЙСЫ</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, numquam repudiandae! Aperiam, ipsam.</p>
+       </div>
+       <div class="cherta"><p>
+      <img src="img/cherta.png" alt="Ой кажется картинка пропала :(">
+      </p>
+      </div>
+      <div class="Cases_text_p_1 mt-2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, numquam repudiandae! Aperiam, ipsam.</p></div>
       
-   </div>
-    
-    <form action="a">
+      
+                       <!--  КАРУСЕЛЬ    -->
+                       
+      <div id="carouselExampleIndicators" class="carousel slide m-5" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/fon_ckes.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/apple.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/fon_blu.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+                       <!--  ************   -->
+      
+      </div>
+      </div>
+      <div class="   CLIENT__WEBSITE ">
+      <div class="row">
+      <div class="client_website_1 d-none d-lg-flex ">
+      <div class="col-2 ">
+      <p><span class="client_1"><strong> CLIENT:</strong></span> <br> 
+      <span class="client_2">Какая-то компания</span> <br>
+      <span class="website_1"> <strong>WEBSITE: </strong></span> <br>
+       <span class="website_2">http://www.somedomain.com</span> </p> 
+       <button type="button" class="btn btn-success"> VISIT LIVE SITE </button>
        
+       </div>
+      
+   <div class="col-9 offset-1">
+       <p class="name_progect_1"> <span class="name_progect_2"> <strong>название проекта </strong></span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, commodi. ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nihil enim adipisci labore natus itaque! ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, iusto! ipsum dolor sit amet, consectetur adipisicing elit. Et harum reprehenderit quae. Esse id consectetur repellendus temporibus labore deserunt eligendi quae magnam .</p>
+   </div>
+      </div></div>
+    <div class="row justify-content-center">
+     <div class="client_website_2 d-flex d-lg-none  flex-column  ">
+      <div class="col-12 mb-2">
+      <p><span class="client_1"><strong> CLIENT:</strong></span> <br> 
+      <span class="client_2">Какая-то компания</span> <br>
+      <span class="website_1"> <strong>WEBSITE: </strong></span> <br>
+       <span class="website_2">http://www.somedomain.com</span> </p> 
+       <button type="button" class="btn btn-success btn-lg">VISIT LIVE SITE</button>
+       
+       </div>
+      
+   <div class="col-12 ">
+       <p class="name_progect_1"> <span class="name_progect_2"> <strong>название проекта </strong></span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, commodi. ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nihil enim adipisci labore natus itaque! ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, iusto! ipsum dolor sit amet, consectetur adipisicing elit. Et harum reprehenderit quae. Esse id consectetur repellendus temporibus labore deserunt eligendi quae magnam .</p>
+   </div>
+      </div>
+      </div>
+      </div>
+      </div></div>
+</div>
+  
+      
+    <form action="rashcet_stoimosti ">
+       <div class="container">
+       <div class="row justify-content-center mt-5">
        <div class="calculation">
        <div class="zg">
             <h2>Расчет стоимости</h2>
@@ -109,134 +326,300 @@
        
         <div class="website">
          <h2>тип сайта</h2>
-         <div class="jk">
-          
-           <select name="list1" id="list1">
-            
-              <option value="pnk1">Выберите пункт... </option>
-              <option value="pnk1">Выберите пункт 2</option>
-              <option value="pnk1">Выберите пункт 3</option>
-              <option value="pnk1">Выберите пункт 4</option>
-              
-          </select></div>
+        
+       <div class="form-floating">
+  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+    <option selected> </option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <label for="floatingSelect">выберите пункт...</label>
+</div>
+        
           </div>
       
         <div class="design">
            <h2>дизайн</h2>
            
-           <select name="list1" id="list2">
-            
-              <option value="pnk1">Выберите пункт...</option>
-              <option value="pnk1">Пункт 2</option>
-              <option value="pnk1">Пункт 3</option>
-              <option value="pnk1">Пункт 4</option>
-              
-          </select></div>
+          <div class="form-floating">
+  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+    <option selected> </option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <label for="floatingSelect">выберите пункт...</label>
+</div>
+       </div>
         
         <div class="adaptability">
          <h2>адаптивность</h2>
+         
+          <div class="form-floating mb-4">
+  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+    <option selected> </option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <label for="floatingSelect">выберите пункт...</label>
+</div>
+<hr><!-- горизонтальный разделитель (горизонтальная черта) -->
+          </div></div>
+          </div>
           
-           <select name="list1" id="list3">
-            
-              <option value="pnk1">Выберите пункт...</option>
-              <option value="pnk1">Пункт 2</option>
-              <option value="pnk1">Пункт 3</option>
-              <option value="pnk1">Пункт 4</option>
-              
-              
-          </select>
+          <div class="row">
+          <div class="ras col-2">
+          <p><br> Сроки <br> <br> Стоимость </p>
           </div>
-          <div class="lin33"></div>
-          <div class="ras">
-          <p>Сроки 0</p>
-          <p>Стоимость 0</p>
+          
+          <div class="ras_1 col-1 offset-9">
+          <p><br>0 <br> <br> 0 </p>
           </div>
           </div>
+          <div class="col-2 w-100 mt-5 d-flex justify-content-center mb-5">
+          <button type="button" class="btn btn-success btn-lg"> Оставить заявку </button>
+          </div>
+          </div>
+          
+          
     </form>
     
-    <div class="statistics">
+     
+    <div class="statistics mt-5">
+    
+     <div class="container-fluid " >
+     <div class="bg-imag_1" style="background-image: url(../src/img/fn.jpg); width: 100%; height: 100vh;">
+   
+      <div class="container">
+      <div class="col-fluid-2 OboMne_01" >
+       <div class="col-fluid-2 What_i_can_do_01  ">
+       <h2>НЕМНОГО СТАТИСТИКИ</h2>
+       <div class="cherta"><p>
+      <img src="img/cherta.png" alt="Ой кажется картинка пропала :(">
+      </p>
+      </div></div></div>
       
-       <div class="zag_statistics">
-        <h2>НЕМНОГО СТАТИСТИКИ</h2>
+      <div class="row d-flex  justify-content-evenly  p-5  d-none d-sm-flex ">
+        
+        <div class="col-2 statik_1 mt-5">
+           <img src="img/smail.png"  class="st-0 p-3" alt="Ой кажется картинка пропала :(">
+           <p class="st-1">120</p>
+           <p class="st-2">Счастливых клиентов</p>
         </div>
         
-        
-        <div class="statistics_rez"><ul>
-            <li><h2>120</h2></li>
-            
-            <li><h2>4,600 </h2></li>
-            
-            <li><h2>340</h2></li>
-            
-            <li><h2>23</h2></li>
-          
-        </ul>
-            <p>Счастливых клиентов</p>
-              <p>Часов работы</p>
-            <p>Проектов завершено</p>
-            <p>Наград получено</p>
+         <div class="col-2 statik_1 mt-5">
+           <img src="img/skob.png"  class="st-0 p-3" alt="Ой кажется картинка пропала :(">
+           <p class="st-1">4,600</p>
+           <p class="st-2">Часов работы</p>
         </div>
-    </div>
+        
+         <div class="col-2 statik_1 mt-5">
+           <img src="img/gal.png"  class="st-0 p-3" alt="Ой кажется картинка пропала :(">
+           <p class="st-1">340</p>
+           <p class="st-2">Проектов завершено</p>
+        </div>
+        
+         <div class="col-2 statik_1 mt-5">
+           <img src="img/kybok.png"  class="st-0 p-3" alt="Ой кажется картинка пропала :(">
+           <p class="st-1">23</p>
+           <p class="st-2">Наград получено</p>
+        </div>
+       
+        </div>
+        
+        <div class=" d-flex d-sm-none  flex-column justify-content-center   mb-3 statistics_03  ">
+           
+        
+         <div class="col-12 statik_1 mt-3">
+           <img src="img/smail.png"  class="st-0 p-3" alt="Ой кажется картинка пропала :(">
+           <p class="st-1">120</p>
+           <p class="st-2">Счастливых клиентов</p>
+        </div>
+        
+         <div class="col-12 statik_1 mt-3">
+           <img src="img/skob.png"  class="st-0 p-3" alt="Ой кажется картинка пропала :(">
+           <p class="st-1">4,600</p>
+           <p class="st-2">Часов работы</p>
+        </div>
+        
+         <div class="col-12 statik_1 mt-3">
+           <img src="img/gal.png"  class="st-0 p-3" alt="Ой кажется картинка пропала :(">
+           <p class="st-1">340</p>
+           <p class="st-2">Проектов завершено</p>
+        </div>
+        
+         <div class="col-12 statik_1 mt-3 mb-4">
+           <img src="img/kybok.png"  class="st-0 p-3" alt="Ой кажется картинка пропала :(">
+           <p class="st-1">23</p>
+           <p class="st-2">Наград получено</p>
+        </div>
+        
+        </div></div>
+    </div></div></div>
+  
+    
      <div class="reviews">
-         <h2>ОТЗЫВЫ</h2>
-         <p><img src="img/f3.PNG" alt="Ой кажется картинка пропала :(" style="width: 100px"></p>
+        <div class="container">
+           <div class="row justify-content-center">
+         <div class="col-fluid-2  mt-5 OboMne_01" >
+      <h2 >ОТЗЫВЫ</h2>
+       <div class="cherta"><p>
+      <img src="img/cherta.png" alt="Ой кажется картинка пропала :(">
+      </p>
+      </div>
+      </div></div>
+        <div class="row justify-content-center">
+      <div class="col-sm-1 mt-4 ">
+  <img src="img/f3.PNG" class="rounded mx-auto d-block  img_f1" alt="Ой кажется картинка пропала :(">
+</div>
+      </div>
+       
+        <div class="col-12  justify-content-center reviews_02 mt-3 ">
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia dicta est rem laborum qui sequi neque <br>asperiores iusto minus quas, culpa reprehenderit cupiditate libero nihil.</p>
+         </div>
+         <div class="col-12  justify-content-center reviews_02">
          <p><b>Михаил,</b> Ген директор ПАО "Газпром".</p>
-         <div class="three_dots"><p></p></div>
-     </div>
+         <div class="d-flex justify-content-center mt-5 mb-5 ">
+             
+             <img src="img/orshar.png"  class="p-2 mb-5" alt="Ой кажется картинка пропала :(">
+             
+             <img src="img/sershar1.png" class="p-2 mb-5" alt="Ой кажется картинка пропала :(">
+             
+             <img src="img/sershar1.png" class="p-2 mb-5" alt="Ой кажется картинка пропала :(">
+             </div>
+     
+           </div>  
+            </div>
+         </div>
+     
      
      <footer>
-     <div class="contacts">
+     
+      <div class="fon_blu_022"  >
+      
+ <div class="contacts">
+
+      <div class="contiainer ">
+      
+      <div class="col-fluid-2 OboMne_01" >
+       <div class="col-fluid-2 contakt_01 ">
+       <h2>МОИ КОНТАКТЫ</h2>
+       <div class="cherta"><p>
+      <img src="img/cherta.png" alt="Ой кажется картинка пропала :(">
+      </p>
+      </div>
+      </div>
+       </div>
+       
        <div class="verx_blok">
-        <div class="contacts_zag23">
-             <h2>МОИ КОНТАКТЫ</h2>
-        </div>
-        <div class="contacts_text1">
+       
+        <div class="contacts_text1 col-12 mt-2">
          <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repellendus facere iste consectetur.</P>
          </div>
-        <div class="address">
-           <a href="https://yandex.ru/maps/-/CCU5iAAQxC" target="_blank" ><img src="img/geo.png" alt="Ой кажется картинка пропала :(" style="width:25px "><br>Nhow Amsterdam Rai</a>
+         
+         <div class="d-flex justify-content-evenly mt-5  d-none d-sm-flex  znahcki_01">
+         
+        <div class="address mt-5  ">
+           <a href="https://yandex.ru/maps/-/CCU5iAAQxC"  class="text-white" target="_blank" ><img src="img/geo.png" alt="Ой кажется картинка пропала :(" style="width:25px "><br>Nhow Amsterdam Rai</a>
            </div>
            
-           <div class="mail">
-          <a href="https://account.mail.ru/login?page=https%3A%2F%2Fe.mail.ru%2Fmessages%2Finbox%3Futm_source%3Dportal%26utm_medium%3Dnew_portal_navigation%26utm_campaign%3De.mail.ru%26mt_click_id%3Dmt-y7s979-1643911921-1036304226%26mt_sub1%3Dmail.ru&allow_external=1" target="_blank"><img src="img/convert.png" alt="Ой кажется картинка пропала :(" style="width:45px "><br>info@companyname.com</a>
+           <div class="mail mt-5  ">
+          <a href="https://account.mail.ru/login?page=https%3A%2F%2Fe.mail.ru%2Fmessages%2Finbox%3Futm_source%3Dportal%26utm_medium%3Dnew_portal_navigation%26utm_campaign%3De.mail.ru%26mt_click_id%3Dmt-y7s979-1643911921-1036304226%26mt_sub1%3Dmail.ru&allow_external=1" class="text-white" target="_blank"><img src="img/convert.png" alt="Ой кажется картинка пропала :(" style="width:45px "><br>info@companyname.com</a>
           </div>
           
-          <div class="number">
+          <div class="number mt-5  ">
            <p><img src="img/trybcka.png" alt="Ой кажется картинка пропала :(" style="width:40px"> <br>+7 999 999-99-99</p>
           </div>
+          
           </div>
-          <form action="d">
+          
+           <div class="d-flex   d-sm-none flex-column justify-content-center mt-5   znahcki_01">
+         
+        <div class="address mt-5  ">
+           <a href="https://yandex.ru/maps/-/CCU5iAAQxC"  class="text-white" target="_blank" ><img src="img/geo.png" alt="Ой кажется картинка пропала :(" style="width:25px "><br>Nhow Amsterdam Rai</a>
+           </div>
+           
+           <div class="mail mt-5  ">
+          <a href="https://account.mail.ru/login?page=https%3A%2F%2Fe.mail.ru%2Fmessages%2Finbox%3Futm_source%3Dportal%26utm_medium%3Dnew_portal_navigation%26utm_campaign%3De.mail.ru%26mt_click_id%3Dmt-y7s979-1643911921-1036304226%26mt_sub1%3Dmail.ru&allow_external=1" class="text-white" target="_blank"><img src="img/convert.png" alt="Ой кажется картинка пропала :(" style="width:45px "><br>info@companyname.com</a>
+          </div>
+          
+          <div class="number mt-5  ">
+           <p><img src="img/trybcka.png" alt="Ой кажется картинка пропала :(" style="width:40px"> <br>+7 999 999-99-99</p>
+          </div>
+          
+          </div>
+          
+          </div>
+          
+          
+          <form class="was-validated" >
 
-            <div class="data_entry">
-                    <h3>ОСТАВЬТЕ МНЕ СООБЩЕНИ</h3> 
-                     
-              <div class="data_entry1"> <input type="text" name="text_input" value="" placeholder="имя" >
-              </div>
-
-             <div class="data_entry2"><input type="text" name="text_input" value="" placeholder="Email" >
-             </div>
-             
-             <div class="data_entry3">
-               <textarea name="" id="" cols="30" rows="10" placeholder="Сообшение"></textarea>
-               
-               <div class="data_entry3_input1"><input type="submit" value="Отправить"> </div>
-               
-              <div class="data_entry3_input2"><input type="reset"></div>
-              
-              </div>
-              </div>
+            <div class="data_entry col-12 d-flex justify-content-center p-5">
+                    <p>ОСТАВЬТЕ МНЕ СООБЩЕНИ</p>
+                    </div>
+       <div class="row d-flex justify-content-center align-items-end d-none d-sm-flex">  
+           
+    <div class="col-4 ml-1" >
+    <input type="text" class="form-control" placeholder="Имя" aria-label="Имя" required>
+  </div>   
+                        
+         <div class="col-4 mr-1">
+  <label for="exampleFormControlInput1" class="form-label"></label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" autocomplete="on" required>
+</div>
+</div> 
+                          
+ <div class="row d-flex justify-content-center align-items-center d-none d-sm-flex">  
+              <div class="col-8">
+    <label for="validationTextarea" class="form-label "></label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Сообщение" required></textarea>
+  </div></div>
+          
+          <div class="d-flex d-sm-none flex-column justify-content-center ">
+              <div class=" mt-1" >
+    <input type="text" class="form-control" placeholder="Имя" aria-label="Имя" required>
+  </div>   
+                        
+<div class=" mt-1" >
+  <label for="exampleFormControlInput1" class="form-label"></label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" autocomplete="on" required>
+     </div>       
+         
+         <div class=" mt-1 mb-1" >
+    <label for="validationTextarea" class="form-label "></label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Сообщение" required></textarea>
+         </div>   
+          </div>
+           
+            <div class="row d-flex justify-content-center  mt-3 ">
+              <div class="col-1 knopka_11 mb-5">
+               <button type="button" class="btn btn-outline-danger btn-lg ">Отправить</button>
+</div>  </div>
           </form>
+          
+          <!--  <div class="soc-seti">
           <div class="silka_1"><a href="https://www.facebook.com/" target="_blank" > <img src="img/fece.png" alt="Ой кажется картинка пропала :(" > </a></div>
           
           <div class="silka_2"><a href="https://twitter.com/?lang=ru" target="_blank" > <img src="img/tinder.png" alt="Ой кажется картинка пропала :(" > </a></div>
           
            <div class="silka_3"><a href="https://www.instagram.com/" target="_blank" > <img src="img/inst.png" alt="Ой кажется картинка пропала :(" > </a>
           </div>
+       </div>-->
+          </div></div></div>
           
-          </div>
-          <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/nhow_amsterdam_rai/98877830047/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Nhow Amsterdam Rai</a><a href="https://yandex.ru/maps/10466/amsterdam/category/hotel/184106414/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Гостиница в Амстердаме</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU5iAAULC" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
-          <div class="konec"> <p>Copyrightⓒ 2021 Андрей Браун. Design by Web</p></div>
+          
+          <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/nhow_amsterdam_rai/98877830047/?utm_medium=mapframe&utm_source=maps" 
+          
+          style="color:#eee;font-size:12px;position:absolute;top:0px;">Nhow Amsterdam Rai</a><a href="https://yandex.ru/maps/10466/amsterdam/category/hotel/184106414/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Гостиница в Амстердаме</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU5iAAULC" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+          
+          
+          <div class="row  align-items-center justify-content-center  konec_all "> <p>Copyrightⓒ 2021 Андрей Браун. Design by Web</p></div>
      </footer>
+     
+     
+     <script src="js/bootstrap.bundle.min.js"></script>
+     
 </body>
 </html>

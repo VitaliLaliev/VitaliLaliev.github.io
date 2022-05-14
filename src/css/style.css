@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'FranklinGothic';
+    src: url('../fonts/FranklinGothic-Medium.eot');
+    src: url('../fonts/FranklinGothic-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FranklinGothic-Medium.woff2') format('woff2'),
+        url('../fonts/FranklinGothic-Medium.woff') format('woff'),
+        url('../fonts/FranklinGothic-Medium.ttf') format('truetype'),
+        url('../fonts/FranklinGothic-Medium.svg#FranklinGothic-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*-- preloader начал --*/
 .preloader {
   /*фиксированное позиционирование*/
@@ -17,9 +29,9 @@
     display: flex;
 /*чтобы надпись была по центру*/
     
-    z-index: 1001;/* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 101;/* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
 }
-.preloader h1{
+.preloader h2{
     font-size: 9rem;
     color:rgba(255,255,255,0.3);/*на другой тип не менять (#ffff, и т.д. ) картинка исчезнет работает только с (rgba) */
     background-image: url(../img/maxre__1.jpg);
@@ -60,6 +72,7 @@ nav{
     height/*высота*/: 60px;
     background: #344051;
     position: fixed;
+    z-index: 10;
     
 }
 .menu li a{
@@ -67,6 +80,7 @@ nav{
     color: white;
     transform: scale(1);
     display: inline-block;
+    text-decoration: none;
     
 }
 
@@ -98,31 +112,32 @@ nav{
     color: #ffff;
     font-size: 28px;
     line-height: 60px;
-    padding-left: 388px;
     float:left;
     -webkit-animation: comming 2s ease;
     -o-animation:  comming 2s ease;
     animation: comming 2s ease;
+    font-family: 'FranklinGothic', sans-serif;
 }
 
 
 
 .menu{
-    float:left;
-    padding-left: 432px; 
+    float:left; 
+    
 }
 
 .menu li{
     float: left;
+    margin-right: 40px;
     line-height: 60px;
     color: #fff;
-    margin-right: 40px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     -webkit-animation: topshift 0.4s forwards ease;
     -o-animation: topshift 0.4s forwards ease;
     animation: topshift 0.4s forwards ease;
     opacity: 0;
+    
 }
 
 @keyframes topshift{
@@ -164,24 +179,24 @@ main{
 }
 .title__container{
     float:left; 
-margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    width:100%;
     opacity: 0;
-    -webkit-animation: topshift2 1s ease forwards;
-    -o-animation:topshift2 1s ease forwards;
+     -webkit-animation: topshift2 1s ease forwards;
+   -o-animation:topshift2 1s ease forwards;
     animation: topshift2 1s ease forwards;    
     -webkit-animation-delay:2s ;
     -o-animation-delay: 2s ;
     animation-delay: 2s ; 
 }
 .title__container h1{
-    font-size:60px;
+    font-family: 'Arial', sans-serif;
+    font-size:72px;
     font-weight: 600;
     
 }
 .title__container h4{
-    margin-top: 44px;
     font-size: 18px;
     color: #79818d;
 
@@ -194,7 +209,7 @@ margin: 432px 0px 0px 404px;
     }
     to{
         opacity: 1;
-        margin-left: 404px;
+        margin-left: 0px;
     }
 }
 
@@ -222,378 +237,193 @@ background: #344051;
 .title__container input:active{
     transform:scale(1.1);
 }
-.OboMne h2{
-    margin-top: 108px;
+@media (max-width: 991px){
+    .title__container ,  .title__container h4,  .title__container input{
+        color:white;
+        position:relative;
+        z-index: 3;
+        
+    }
+    .title__container input{
+     border: 2px solid #fff;
+        }
+    .main{
+        position: relative;
+    }
+    .main::after{
+        content:"";
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right:0;
+        position: absolute;
+        background: rgba(0,0,0,0.4)
+        
+    }
+}
+.OboMne_01{
     text-align: center;
+   
+}
+.OboMne h2{
     font-weight:600;
     color: #263244;
-    font-size: 23px;
-    text-transform: uppercase;
-
-}
-.cherta p{
-    margin-top:31px;
-    text-align: center;
-  background: url(../img/f1.PNG) 50% 100%/212px 202px no-repeat;
-    height: 231px;
-}
-.tt{
-     margin: 23px 25% 40px 25% ;
-  color: #3f495a;
-}
-.tt1{
-    margin: 0px 25% 36px 25% ; 
-    color: #3f495a;
-}
-.OboMne a{
-    margin-left:800px;
-    color: #6f707e;
-    border: 3px solid #6f707e;
-    border-radius: 6px ;
-    padding: 9px 11px 10px 32px;
-    background: url(../img/ikonka.png) 10px 9px/auto  no-repeat;
-    display: inline-block;
-     transform: scale(1)
-}
-.OboMne a:hover {
-    background: #f67f3a;
-color: white;
-} 
-.OboMne a:active{
-    transform: scale(1.1)
-}
-
-.What_i_can_do{
-    margin-top: 97px;
-    height: 522px;
-    background: url(../img/bg1.jpg) center 100%/auto no-repeat;   
-}
-.What_i_can_do h2{
-    padding-top: 106px;
-    text-align: center;
-    height: 150px;
     font-size: 25px;
-    color: #263244;
-    font-weight: 600;
-     background: url(../img/cherta.png) 50% 100% no-repeat;  
 }
+.img_f1{
+    width: 100%;
+}
+@media (max-width: 575px){
+    .img_f1 {
+        width: 50%;    
+    }
+}
+.obomne_text_1 {
+    color: #3f495a;
+    font-size: 14px;
+    
+}
+
+.What_i_can_do_01{
+    padding-top: 8%;
+}
+
 .Skills{
-    padding-top: 180px;
-    float: left;
-     margin-left: 430px;
-    background:url(../img/n.png)8.8% 115px/auto no-repeat,url(../img/z.png)33.5% 115px no-repeat,url(../img/raketa.png)61% 115px no-repeat,url(../img/gramofon.png)88.6% 115px no-repeat;
+    text-align: center;
+}
 
-
+.vb-diz{
+    color:#d07f27; 
+    font-size: 14px;
+    
 }
-.Skills ul li{
-float: left;
-    margin-left: 65px;
-    padding-right: 80px;
-    font-size: 16px;
-    color: #d07f27;
-    font-weight: 600;
-    text-align: center;
-  
-}
-.Skills p{   
-    float: left;
-    font-size: 15px;
-    width: 210px;
-    text-align: center;
+.vb-diz-1{
+    font-size: 13px;
     color: #3f495a;
-   margin-right: 43px;
-   }
-.Cases h2{
-    margin-top:110px ;
-    text-align: center;
-    font-size:23px;
-    font-weight: 600;
-    color: #384354;  
-    padding-bottom: 23px;
-    background:url(../img/cherta.png) center 40px no-repeat;
 }
-.Cases p{
-    margin-top:36px;
+.Cases_01{
     text-align: center;
-    color: #3f495a;
-    font-size: 18.05px;
 }
-.Cases{
-    height: 805px;
-    background: url(../img/f2.PNG) center 150px/70% 83% no-repeat;
-}
-.zg h2{
-    margin-top: 200px;
-    text-align: center;
+.Cases_02 h2{
+    font-weight:600;
+    color: #263244;
     font-size: 25px;
-    font-weight: 600;
-    color: #1c2534;
-    
 }
-.calculation{
-    margin:0px 533px 0px 494px ;
+.Cases_text_p_1{
+     text-align: center;
 }
-.website h2{
-    margin: 50px 0px 21px 0px;
-    font-size: 20px;
-    color: #1c2534;
-
+.client_1{
+   font-size:  19px;
 }
-.website select{
-    width: 730px;
-    height:45px;
-    padding-left: 25px;
-    border: 0px solid #6d7682;
-    background-color:#eeeeee;
-    
+.client_2{
+    font-size:  13px;
 }
-.design h2{
-     margin: 50px 0px 21px 0px;
-    font-size: 20px;
-    color: #1c2534;
+.website_1{
+    font-size:  19px;
 }
-.design select{
-    width: 730px;
-    height:45px;
-    padding-left: 25px;
-    border: 0px solid #6d7682;
-    background-color:#eeeeee;
+.website_2{
+    font-size: : 13px;
 }
-.adaptability h2{
-    margin: 50px 0px 21px 0px;
-    font-size: 20px;
-    color: #1c2534;
+.name_progect_2{
+font-size:  19px;
 }
-.adaptability select{
-    width: 730px;
-    height:45px;
-    padding-left: 25px;
-    border: 0px solid #6d7682;
-    background-color:#eeeeee;
+.name_progect_1{
+font-size:16px;
 }
-.lin33{
-    margin-top: 36px;
-    border: none; /* Убираем границу */
-    background-color:#d1d1d1; /* Цвет линии */
-    color: #d1d1d1; /* Цвет линии для IE6-7 */
-    height: 2px; /* Толщина линии */
-
+.client_website_2{
+    text-align: center;
+}
+.zg{
+text-align: center;
 }
 .ras p{
-    padding: 10px 10px 10px 0px;
-     color: #1c2534;
-    font-weight:700;
-  
+    font-size: 16px;
+    font-weight: 600; 
 }
-.statistics{
-    margin-top: 153px;
-    height: 497px;
-    background: url(../img/fn.jpg) center  no-repeat;
+.ras_1 p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bg-imag_1{
     background-attachment:fixed;
-    overflow: hidden;
-    
-}
-.zag_statistics h2{
-     padding-top: 99px;
-    text-align: center;
-    height: 160px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #323e4f;
-    text-align: center;
-    background: url(../img/cherta.png) 50% 99% no-repeat;
-    
-}
-.statistics_rez{
-    margin-top: 85px;
-    padding-top:86px;
-    margin-left: 400px;
-    margin-right: 380px;
-background:url(../img/smail.png)78px 6% no-repeat,url(../img/skob.png)325px 6% no-repeat,url(../img/gal.png)585px 6% no-repeat,url(../img/kybok.png) 810px 6% no-repeat;
-}
+    background-repeat: no-repeat;
 
-.statistics_rez h2{
-  float: left;
-   margin-left: 70px;
-    margin-right:109px ;
-    font-size: 30px;
+    
+}
+.statik_1{
+    text-align: center;
+
+}
+.st-1{
     font-weight: 900;
-    color: #323e4f;
-        
-}
-.statistics_rez p{
-    float: left;
-    white-space:nowrap;
-    text-align:center;
-    width:240px ;
-    margin-top: 30px;
-    font-size: 15px;
-    color: #323e4f;
-}
-.reviews h2{
-    margin-top: 106px;
-    text-align: center;
-    font-size:23px;
-    font-weight: 600;
-    color: #243042;  
-    padding-bottom: 23px;
-    background:url(../img/cherta.png) center 40px no-repeat;
-    margin-bottom: 57px;
-}
-.reviews p{
-    padding-bottom: 35px;
-    text-align: center;
-    color: #243042;
-    
-}
-.three_dots{
-   background: url(../img/orshar.png)48.5%  no-repeat, url(../img/sershar1.png) 50% no-repeat , url(../img/sershar1.png) 51.5% no-repeat;
-     
-}
-.contacts{
-   margin-top: 90px;
-    height: 808px;
-    background: url(../img/fon_blu.jpg)center/cover no-repeat;
-}
-.verx_blok{
-  
-}
-.contacts_zag23 h2{
-    padding-top: 100px;
-    text-align: center;
-    height: 160px;
-    font-size: 30px;
-    font-weight: 600;
-    color: #ffff;
-    text-align: center;
-    background: url(../img/cherta.png) 50% 99% no-repeat;
-}
-.contacts_text1 p{
-    margin: 30px 0px 45px 0px;
-    text-align: center;
-    color: #ffff;
+     font-size: 30px;
+    color: #293b4f;
 
 }
-.address a{
-float: left;
-    line-height:35px;
-    color: #ffff;
+.st-2{
+font-size: 16px;
+color: #293b4f;
+}
+.statistics_03{
     text-align: center;
-    padding-left: 538px;
+}
+.reviews_02{
+    text-align: center;
+}
+.contacts_021{
+    background-repeat: no-repeat;
+     width: 100%;
+}
+.fon_blu_022{
+background: url(../img/fon_blu.jpg);
     
-        
-}
-.mail a{
-    float: left;
-    line-height:35px;
-    color: #ffff;
-    text-align: center;
-    padding-left: 120px;
-}
-.number p{
-float: left;
-    color: #ffff;
-    line-height:35px;
-    text-align: center;
-    padding-left: 120px;
+     background-position: center center;
+  
+  /* Фоновое изображение не повторяется */
+  background-repeat: no-repeat;
+  
+  /* Фоновое изображение зафиксировано в окне просмотра, поэтому оно не смещается, когда высота контента больше высоты изображения */
+  background-attachment: fixed;
+  
+  /* Вот что позволяет фоновому изображению подстраиваться под размер контейнера */
+  background-size: cover;
     }
-.data_entry h3{
-    margin-top: 155px;
-    font-size: 19px;
-    color:#ffff;
+.contakt_01 {
+    padding-top: 8%;
+}
+.contakt_01 h2 {
+    color: white;
+    font-weight: 700;
+    
+}
+.contacts_text1{
+    color: white;
     text-align: center;
+}
+.znahcki_01{
+    color: white;
+    text-align: center;
+}
+.data_entry p{
+    color: white;
+    font-size: 17px;
     font-weight: 600;
 }
-.data_entry1 input{
-    margin-top: 45px;
-    margin-left: 510px;
-    float: left;
-    padding-left:10px  ;
-    height: 34px;
-    width: 351px;
-    margin-right: 29px;
-    opacity: 80%;
+.knopka_11{
+    text-align: center;
 }
-.data_entry2 input{
-    margin-top: 45px;
-    float: left;
-    height: 34px;
-    width: 351px;
-    opacity: 80%;
-}
- textarea {
-     margin-top: 10px;
-     margin-left: 510px;
-     width: 731px;
-     height:92px ;
-     opacity: 80%;
-}
-.data_entry3_input1 input{
-    margin-top: 28px ;
-    margin-left:42.5%;
-    float: left;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffff ;
-    width: 120px; 
-    height: 40px;
-    border: 3px solid #ffff;
-    background: none;
-    border-radius: 6px;
- transform: scale(1)
-  
-  
-}
-.data_entry3_input1 input:hover{
-    transform: scale(1.1)
-}
-}
-.data_entry3_input1 input:active{
-    transform: scale(1)
-}
-.data_entry3_input2 input{
-     margin-top: 28px ;
-     margin-left: 30px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffff ;
-    width: 120px; 
-    height: 40px;
-    border: 3px solid #ffff;
-    background: none;
-    border-radius: 6px;
-    transform: scale(1)
-}
-.data_entry3_input2 input:hover{
-    transform: scale(1.1)
-}
-.data_entry3_input2 input:active{
-    transform: scale(1)
-}
-.silka_1 a{
-    float: left;
-    margin-top: 83px;
-  margin-right: 55px;  
-margin-left: 672px;
-    
-}
-.silka_2 a{
-float: left;
-  margin-top: 87px;
-  margin-right: 215px 
-}
-.silka_3 a{
-  float: left;  
- margin-top: 85px;
-    
-}
-.konec{
-    width/*ширина*/: 100%;
-    height/*высота*/: 96px;
+
+.konec_all{
+  width: 100%;
+    height: 60px;
     background: #344051;
-    }
-.konec p{
-    color:#ffff;
+    
+}
+
+.konec_all p{
+    color: white;
+    font-size: 14px;
     text-align: center;
-    line-height: 96px;
+    
 }

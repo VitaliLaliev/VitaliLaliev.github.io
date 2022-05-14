@@ -1,0 +1,257 @@
+/*обнуление*/
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+    background-color: #fff;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+a{
+    color: #794f45;
+}
+h1{
+    font-size: 40px;
+    margin:0px 0px 50px 0px;
+}
+h2{
+    font-size: 30px;
+    margin:0px 0px 20px 0px;
+}
+p{
+    margin: 20px 0;
+    
+}
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+}
+.content{
+    padding: 35px 3%;   
+}
+.content__block{
+     margin:0px 0px 50px 0px; 
+}
+
+
+/* Основные стили */
+
+/* 2D */
+.content__2D .content__block div {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    transform: all 0.8s ease 0s;
+    
+}
+/* translate */
+.content__translate{
+    background-color: #794f45;
+}
+/* transform: РАБОТАЕТ ТОЛЬКО С БЛОЧНЫМИ ЭЛЕМЕНТОМИ ЕСЛИ НЕ РАБОТАЕТ ДОБАВЬ 
+display: inline-block; для сылок */
+.content__translate:hover{
+    transform: translateY(50px) 
+        
+        /*при наведении "hover" c двигается по осям transform: translate(50px,60px) ЧТОБЫ ДВИГАТЬ ПО ДВУМ ОСЯМ */
+}
+
+/* scale */
+.content__scale{
+    transform: scale(1,1);
+    background-color: #77608d;
+}
+.content__scale:hover{
+     transform: scale(0.5, 0.5); 
+    /*при наведении "hover" Можно увеличить или уменьнить сжать перевернуть сверху в низ при отрицательных значениях  transform: scale(-1, -2); если значения одинаковвые можно писать только одно */
+}
+
+.content__rotate{
+    transform:rotate(0deg);
+      background-color: #7a956b;
+}
+.content__rotate:hover{
+    transform:rotate(30deg);
+    /*при наведении "hover" поварачивается на указаный градус */ 
+}
+
+.content__skew {
+    transform: skew(0deg,0deg);
+  background-color: #794f45;
+}
+.content__skew:hover{
+    transform: skew(40deg,0deg);
+      /*при наведении "hover" поварачивается на указаный градус по ОСЯМ */ 
+}
+
+.content__matrix{
+    transform:matrix(1,0,0,1,0,0);
+  background-color: #77608d;
+}
+.content__matrix:hover{
+    transform:matrix(1,0,1,1,1,0);
+     background-color: #77608d;
+    /*при наведении "hover" содержит в себе несколько значей первое (растягивает по оси  на выброный градус scale X,--растягивает по оси  на выброный градус skew Y,--растягивает по оси  на выброный градус skew X,--равномерное увеличение  scale Y, перемешение по оси transform X, перемешение по оси transform Y.
+    (scale X, skew Y,  skew X, scale Y, transform X, transform Y )
+    !! ПОСЛЕДНИИ ДВА ЗНАЧЕНИЯ МОГУТ БЫТЬ НЕ ЗАМЕТНЫЙ ИЗА ПЕРВОГО ЧТОБЫ ИСПРАВИТЬ УМЕНЬШЬ scale X ДО 1 !! */ 
+}
+.content__multi {
+  background-color: #7a956b;
+}
+.content__multi:hover {
+  background-color: #7a956b;
+    transform: translate(50px,50px) scale(0.5) rotate(42deg);
+/*   можно использовать сразу несколько значений translate, scale,rotate */
+}
+.content__transform-origin{
+      background-color: #794f45;
+    transform-origin:left top;
+    transform:rotate(0deg);
+/* transform-origin: работает как будто в указаную нами часть центер или в один из углов вбили гвоздик и анимация врошается вокруг него   */
+}
+.content__transform-origin:hover{
+    transform:rotate(30deg);
+}
+.content__3D .content__wrapper3d{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0,0,0,0.6);
+    perspective-origin: center;
+    perspective: 400px;
+    }
+/*perspective: 400px; задает растояния от зрителя до элемента (ось z)*/
+.content__3D .content__wrapper3d div{
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: all 0.8s ease 0s;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    
+}
+.content__perspective{
+    background-color: #7a956b;
+    
+}
+.content__perspective:hover{
+    transform: rotateX(50deg);
+}
+.content__translate3d {
+    transform: translate3d(0px,0px,0px);
+    background-color:#794f45;
+}
+.content__translate3d:hover {
+     transform: translate3d(20px, 20px, 50px);   
+}
+
+
+.content__scale3d{
+    transform: scale3d(1, 1, 1);
+    background-color: #77608d;
+}
+.content__scale3d:hover {
+     transform: scale3d(2, 2, 5); 
+}
+
+
+.content__rotate3d{
+    transform:rotate3d(1, 1, 1, 0deg);
+      background-color: #7a956b;
+}
+.content__rotate3d:hover{
+    transform: rotate3d(1, 1, 1, 45deg);
+}
+
+
+.content__multi3d {
+  background-color: #794f45;
+}
+
+.content__multi3d:hover {
+  background-color: #794f45;
+    transform: translate3d(20px,20px,20px) rotate3d(1, 1, 1, 10deg);
+
+}
+.content__transform-style-wrapper{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(102, 255, 0,0.3);
+    perspective: 400px; 
+    transform-style: preserve-3d;
+}
+.content__transform-style {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: all 0.8s ease 0s;
+    width: 150px;
+    height: 150px;
+   transform: rotateX(0deg);
+    background-color: #7a956b;
+    margin-top: 30px;
+}
+.content__transform-style:hover{
+       transform: rotateX(50deg);
+}
+.flip{
+    
+}
+.flip__body{
+    position: relative;
+     width: 150px;
+    height: 150px;
+    transition: all 0.8s ease 0s;
+    transform-style: preserve-3d;
+}
+.flip__front,
+.flip__back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 30px;
+}
+
+.flip__front{
+    z-index: 2;
+   transform:rotateY(0deg);
+    background-color: #77608d;
+    
+    backface-visibility: hidden;
+/*   при развороте карточки прячет заднюю сторону и можно создать сзади чтото другое !! УДАЛИ 
+    backface-visibility: hidden;
+ЧТОБЫ ПОНЯТЬ КАК РАБОТАЕТ*/
+}
+
+.flip__back{
+     transform: rotateY(-180deg);
+    background-color: rgba(121,79,69,0.5);
+}
+.flip:hover .flip__body{
+    transform:rotateY(-180deg);
+  
+}

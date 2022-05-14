@@ -1,0 +1,285 @@
+
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+/* не трогай уберёшь хоть работать не будет */
+    background: url(../img/apple.jpg) center no-repeat;
+/*---------------*/
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    display: flex;
+/*чтобы надпись была по центру*/
+    
+    
+    z-index: 1001;/* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+}
+.preloader h1{
+    font-size: 9rem;
+    color:rgba(255,255,255,0.3);
+/*на другой тип не менять (#ffff) картинка исчезнет работает только с (rgba) */
+    background-image: url(../img/maxre__1.jpg);
+    -webkit-background-clip: text;
+    -moz-background-clip:text ;
+    background-clip: text ; 
+    animation: load__1 10s infinite ;
+}
+@keyframes load__1{
+    from{
+        background-position: left 0 ;
+    }
+    to{
+        background-position: left 600px ;
+    }
+}
+
+/*.load_1{
+    background: url(../img/apple.jpg) center no-repeat;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+}
+.load_1 h1{
+    font-size: 9rem;
+    color:rgba(255,255,255,0.3);
+    background-image: url(../img/maxre__1.jpg);
+    -webkit-background-clip: text;
+    -moz-background-clip:text ;
+    background-clip: text ; 
+    animation: load__1 10s infinite ;
+}
+@keyframes load__1{
+    from{
+        background-position: left 0 ;
+    }
+    to{
+        background-position: left 600px ;
+    }
+}
+
+
+
+/*a{
+ color:deeppink;  
+    text-decoration: none;
+    padding: 20px;
+}
+a:active{/*меняет цвет сылки при нажатии "active"*/
+  /*  color: aqua;
+}
+
+a:hover{/* при наведении выделает "hover"*/
+ /*   background-color: darkgrey;
+ }   
+
+.box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #333;
+        text-align: center;
+}
+.box:hover{
+    background-color: brown;
+    width: 300px;/*можно менять ширину и высоту при наведении*/
+}
+/*a:visited{/*после перехода по сылки меняет цвет на выбраный */
+    /*color: darkgreen;
+}
+input:focus{/*Фокус (выделение) работает при нажатии. Можно менять толшину рамки и т.д. */
+  /* border: 3px solid green;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8)
+}
+
+/*ОБРАЩЕНИЯ ПО ЭЛЕМЕНТУ МОЖНО ВЫБРАТЬ ЛЮБОЙ ЭЛЕМЕНТ ИЛИ НЕСКОЛЬКО НАПРИМЕР ТОЛЬКО ЧЁТНЫЕ И Т.Д.*/
+
+
+/*li:first-child{/*выбор первого элемента*/
+   /* background-color: red;
+}
+li:last-child{/*выбор последнего элемента*/
+  /* background-color:chartreuse; 
+}
+li:nth-child(3){/*выбор любого  элемента ля этого пишем nth-child() и в скобках номер выюроного элемента */
+ /*   background-color: cornflowerblue;
+}*/
+
+/*li:nth-child(odd){
+     background-color:chartreuse;
+    /*выбор чет нечет элемента для этого пишем nth-child() и в скобках (even) каждый четный или 
+    кажды не чет (odd) */
+    /* также можно использовать запись (2n)каждый второй (кажды четный) или (3n)каждый трети или (2n+1)кажды не чет*/
+    }
+
+/*p:first-letter{
+color: red;
+    font-size: 25px;
+}
+*/
+
+
+
+/*fody{
+ padding: 50px; 
+}
+
+.fox span{
+    display: block;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.fox{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    /*transition-duration: 0.5s;/*время за которое должна выполнитца анимация */
+  /*  transition-property:all;/*можно выбирать какие анимации будут выполнятся если больше чем одна указывать через запятую пример transition-property:width,background-color;*/
+    /*transition-delay: 0.15s;/*задержка перед анимацией*/
+/*transition-timing-function:cubic-bezier(0,1.58,1,-0.39);/*поведения анимации*/
+  
+
+}
+/*.fox:active{
+margin-left: 300px;
+    
+}*/
+/*----------------*/
+/*fody{
+ padding: 50px; 
+}
+
+.fox span{
+    display: block;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.fox{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: antiquewhite;
+animation-name: move;
+    animation-duration: 5s;
+    -webkit-animation-timing-function: ease;
+    -o-animation-timing-function: ease ;
+     animation-timing-function: ease; 
+    animation-delay: 0.3s;
+   animation-iteration-count:3; /*количество повторений*/
+   /* animation-direction:alternate;
+    /*универсальная запись (говорится на 43 минуте) animation:move 1s linear reverse infinite;
+  
+}
+
+
+/*@keyframes move{
+    0%{
+        background: red;
+    }
+    10%{
+        background:blue;
+    }
+    50%{
+        background: white;
+    }
+    100%{
+        background: black;
+    }/*анимция сменый цветов
+}
+*/
+/*@keyframes move{
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: 200px
+    }
+}/*анимация движения*/
+/*--------------------------------*/
+fody{
+ padding: 50px; 
+}
+
+.fox span{
+    display: block;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.fox{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    animation:move 1s linear alternate infinite,bg-color 2s infinite;
+    
+    
+}
+
+   
+}/*анимация движения*/
+@keyframes bg-color{
+    0%{
+        background: red
+    }
+    100%{
+        background-color: aliceblue;
+    }
+}
+
+
+
+fox:active{
+    animation-play-state: paused;
+}
+    
+       
+    <!-- <ul style="border:0px  black; padding:">
+         
+          <li style="width:250px;height:130px"><h2>CLIENT: </h2> <p>Какая-то компания  </p>
+         <h2> WEBSITE:</h2> <p>http://www.somedomain.com </p></li>
+          
+          <li style="width:1030px;height:80px" > <h3>название проекта </h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, commodi. ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nihil enim adipisci labore natus itaque! ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, iusto! ipsum dolor sit amet, consectetur adipisicing elit. Et harum reprehenderit quae. Esse id consectetur repellendus temporibus labore deserunt eligendi quae magnam .</p></li>
+     </ul>-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
